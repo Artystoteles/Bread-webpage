@@ -7,7 +7,6 @@ body {
   background: rgb(160, 134, 50);
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 ul {
   list-style-type: none;
@@ -73,7 +72,6 @@ button {
   transform: translateY(-10px);
   transition: all 0.4s ease;
 }
-
 .menu button:focus + ul,
 .produkty button:focus + ul,
 .o_nas button:focus + ul {
@@ -101,44 +99,89 @@ button {
 .container,
 .products-container,
 .o-nas-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
   margin: 10px 0px 10px 0px;
 }
+.container {
+  height: 400px;
+}
 .products-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 300px 0px 200px;
+  height: 300px;
 }
+
 .produkt-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: white;
-  margin: 20px;
+  margin: 50px;
   height: 250px;
   width: 200px;
   border-radius: 25px;
   box-shadow: 1px 1px 10px black;
+}
+.produkt-container.test {
+  background-color: black;
+}
+.product-name {
+  font-family: "Festive", cursive;
 }
 .produkt-image-container {
   width: 100px;
   height: 100px;
 }
 .product-description-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  font-family: "Roboto", cursive;
 }
 .produkt-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .produkt-btn {
-  border: 1px solid black;
+  padding: 2px;
+  color: rgb(255, 115, 0);
+  border: 3px solid rgb(255, 115, 0);
+  border-radius: 25px;
   height: 25px;
   width: 100px;
+}
+.produkt-btn.active {
+  color: white;
+  background-color: rgb(255, 115, 0);
+}
+.o-nas-container {
+  height: 1500px;
+}
+.o-nas-title,
+.container-title,
+.products-container-title {
+  font-family: "Festive", cursive;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  font-size: 50px;
+  width: 90%;
+  line-height: 0.1em;
+  margin: 50px;
+}
+.o-nas-lines,
+.container-lines,
+.products-container-lines {
+  background: rgb(160, 134, 50);
+  padding: 0 10px;
 }

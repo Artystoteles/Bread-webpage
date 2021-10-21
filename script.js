@@ -1,16 +1,22 @@
 const title = document.querySelector(".title");
-const produktBtn = document.querySelector(".produkt-btn");
+var produktBtn = document.querySelectorAll(".produkt-btn");
+var produktContainer = document.querySelectorAll(".produkt-container");
 let btn_active = false;
+
 window.addEventListener("load", () => {
   title.classList.add("loaded");
 });
 
-produktBtn.addEventListener("click", () => {
-  if (!btn_active) {
-    produktBtn.innerText = "Back";
-    btn_active = true;
-  } else {
-    produktBtn.innerText = "Details";
-    btn_active = false;
-  }
+produktBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (!btn_active) {
+      button.classList.add("active");
+      button.innerText = "Back";
+      btn_active = true;
+    } else {
+      button.classList.remove("active");
+      button.innerText = "Details";
+      btn_active = false;
+    }
+  });
 });
