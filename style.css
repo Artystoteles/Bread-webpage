@@ -23,6 +23,8 @@ button {
   width: 100%;
   height: 100%;
 }
+
+/* NAVBAR */
 .title {
   font-family: "Festive", cursive;
   font-weight: bold;
@@ -96,6 +98,7 @@ button {
 .o_nas li:hover {
   background: rgb(172, 163, 143);
 }
+/* CONTAINERS */
 .container,
 .products-container,
 .o-nas-container {
@@ -105,18 +108,21 @@ button {
   align-items: center;
   height: 100px;
   margin: 10px 0px 10px 0px;
+  border: 1px solid red;
 }
+/* MAIN CONTAINER */
 .container {
   height: 400px;
 }
+/* PRODUCTS CONTAINER */
 .products-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 300px 0px 200px;
   height: 300px;
 }
-
 .produkt-container {
   display: flex;
   justify-content: center;
@@ -164,12 +170,62 @@ button {
   color: white;
   background-color: rgb(255, 115, 0);
 }
-.o-nas-container {
-  height: 1500px;
+.products-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.o-nas-title,
+
+/* O NAS CONTAINER */
+
+.o-nas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+}
+.kim-jestesmy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.kim-jestesmy-container h2 {
+  text-align: center;
+  font-family: "Roboto", cursive;
+  margin: 10px;
+  font-size: 50px;
+}
+.kim-jestesmy-container p {
+  font-family: "Roboto", cursive;
+  margin: 10px;
+  font-size: 30px;
+  float: left;
+}
+.kim-jestesmy-title {
+  margin: 20px;
+}
+.map-container {
+  float: right;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* OGÓLNE */
+.container-title-container,
+.products-title-container,
+.o-nas-title-container {
+  border: 1px solid rgb(18, 218, 18);
+  width: 100%;
+}
 .container-title,
-.products-container-title {
+.products-title,
+.o-nas-title {
   font-family: "Festive", cursive;
   text-align: center;
   font-weight: bold;
@@ -179,9 +235,9 @@ button {
   line-height: 0.1em;
   margin: 50px;
 }
-.o-nas-lines,
 .container-lines,
-.products-container-lines {
+.products-container-lines,
+.o-nas-lines {
   background: rgb(160, 134, 50);
   padding: 0 10px;
 }
