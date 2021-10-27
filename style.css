@@ -137,6 +137,10 @@ button {
 }
 .produkt-container.test {
   background-color: black;
+  color: white;
+}
+.produkt-container.test {
+  background-color: black;
 }
 .product-name {
   font-family: "Festive", cursive;
