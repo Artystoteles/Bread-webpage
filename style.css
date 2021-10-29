@@ -106,9 +106,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
   margin: 10px 0px 10px 0px;
-  border: 1px solid red;
 }
 /* MAIN CONTAINER */
 .container {
@@ -117,11 +115,11 @@ button {
 /* PRODUCTS CONTAINER */
 .products-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 300px 0px 200px;
-  height: 300px;
+  padding: 100px 0px 100px 0px;
+  height: 800px;
 }
 .produkt-container {
   display: flex;
@@ -130,32 +128,43 @@ button {
   flex-direction: column;
   background-color: white;
   margin: 50px;
-  height: 250px;
-  width: 200px;
+  height: 300px;
+  width: 250px;
   border-radius: 25px;
   box-shadow: 1px 1px 10px black;
-}
-.produkt-container.test {
-  background-color: black;
-  color: white;
-}
-.produkt-container.test {
-  background-color: black;
 }
 .product-name {
   font-family: "Festive", cursive;
 }
-.produkt-image-container {
-  width: 100px;
-  height: 100px;
+.product-name-container {
+  pointer-events: none;
+  transform: translateY(25px);
+  font-size: 1.6rem;
+  transition: all 0.5s ease-in-out;
+}
+.produkt-container.test .product-name-container {
+  font-size: 1.3rem;
+  transform: translateY(0);
 }
 .product-description-container {
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-family: "Roboto", cursive;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  margin: 0px 10px 10px 10px;
+}
+.produkt-container.test .product-description-container {
+  opacity: 1;
+}
+.produkt-image-container {
+  width: 100px;
+  height: 100px;
 }
 .produkt-image-container img {
   width: 100%;
@@ -187,7 +196,8 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 800px;
+  padding: 100px 0px 0px 0px;
+  height: 600px;
 }
 .kim-jestesmy-container {
   display: flex;
@@ -214,17 +224,28 @@ button {
 .map-container {
   float: right;
 }
+.map {
+  border-radius: 20px;
+}
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.content p {
+  text-align: center;
+}
+
+/* FOOTER */
 
 /* OGÓLNE */
 .container-title-container,
 .products-title-container,
 .o-nas-title-container {
-  border: 1px solid rgb(18, 218, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
   width: 100%;
 }
 .container-title,
@@ -243,5 +264,11 @@ button {
 .products-container-lines,
 .o-nas-lines {
   background: rgb(160, 134, 50);
-  padding: 0 10px;
+}
+.przerywnik {
+  width: 100;
+  height: 100px;
+  background-color: rgb(190, 178, 122);
+  margin: 10px 0px 10px 0px;
+  box-shadow: 0 0 1em rgb(0, 0, 0);
 }
