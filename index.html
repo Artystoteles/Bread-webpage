@@ -21,11 +21,13 @@
   </head>
   <body>
     <nav class="navbar-container">
-      <div class="title">Golden Buns</div>
+      <div class="title">Golden Buns
+        <button class="change">Przycisk</button>
+      </div>
       <div class="navbar">
         <div class="menu">
           <button class="menu-btn">Menu</button>
-          <ul>
+          <ul class='nav-list'>
             <li><a href="#">Główna</a></li>
             <li><a href="#">Produkty</a></li>
             <li><a href="#">O nas</a></li>
@@ -33,16 +35,16 @@
         </div>
         <div class="produkty">
           <button class="produkty-btn">Produkty</button>
-          <ul>
-            <li><a href="#">Chleb</a></li>
-            <li><a href="#">Bułka</a></li>
-            <li><a href="#">Bagietki</a></li>
-            <li><a href="#">Chleb tostowy</a></li>
+          <ul class='nav-list'>
+            <li class='first_item'><a href="#">Chleb</a></li>
+            <li class='second_item'><a href="#">Bułka</a></li>
+            <li class='third_item'><a href="#">Bagietki</a></li>
+            <li class='fourth_item'><a href="#">Chleb tostowy</a></li>
           </ul>
         </div>
         <div class="o_nas">
           <button class="o_nas-btn">O nas</button>
-          <ul>
+          <ul class='nav-list'>
             <li><a href="#">Kim jesteśmy?</a></li>
             <li><a href="#">Lokalizacja</a></li>
             <li><a href="#">Kontakt</a></li>
@@ -54,18 +56,18 @@
     <main class="main-container">
       <div class="container">
         <div class="container-title-container">
-          <h1 class='container-title'><span class="container-lines">Container</span></h1>
+          <h1 class='container-title'><span class=" lines">Container</span></h1>
         </div>
       </div>  
       <div class="przerywnik"></div>  
       </div>
       <div class="products-container">
         <div class="products-title-container">
-          <h1 class='products-title'><span class="products-container-lines">Products</span></h1>
+          <h1 class='products-title'><span class=" lines">Products</span></h1>
         </div>
        <div class="products-list">
-        <div id='chleb' class="produkt-container">
-          <div class="produkt-image-container">
+        <div id='chleb' class="produkt-container ">
+          <div class="produkt-image-container first-item-image">
             <img
               class="product-image"
               src="../images/chleb-bgl.png "
@@ -74,17 +76,17 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name">Bread</h1>
+            <h1 class="product-name first-item-name">Bread</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description">
+            <p class="product-description first-item-description">
               Just bread. What did you expected?
             </p>
           </div>
           <button class="produkt-btn">Details</button>
         </div>
         <div id='bulka' class="produkt-container">
-          <div class="produkt-image-container">
+          <div class="produkt-image-container second-item-image">
             <img
               class="product-image"
               src="../images/bulka-bgl.png "
@@ -93,15 +95,15 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name">Bun</h1>
+            <h1 class="product-name second-item-name">Bun</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description">Just bun. What did you expected?</p>
+            <p class="product-description second-item-description">Just bun. What did you expected?</p>
           </div>
           <button class="produkt-btn">Details</button>
         </div>
         <div id='bagietka' class="produkt-container">
-          <div class="produkt-image-container">
+          <div class="produkt-image-container third-item-image">
             <img
               class="product-image"
               src="../images/bagietka-bgl.png "
@@ -110,17 +112,17 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name">Baguette</h1>
+            <h1 class="product-name third-item-name">Baguette</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description">
+            <p class="product-description third-item-description">
               Just baguette. What did you expected?
             </p>
           </div>
           <button class="produkt-btn">Details</button>
         </div>
         <div id='toast-bread'' class="produkt-container">
-          <div class="produkt-image-container">
+          <div class="produkt-image-container fourth-item-image">
             <img
               class="product-image"
               src="../images/tast-bread-bgl.png "
@@ -129,10 +131,10 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name">Toast bread</h1>
+            <h1 class="product-name fourth-item-name">Toast bread</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description">
+            <p class="product-description fourth-item-description">
               Just Toast bread. What did you expected?
             </p>
           </div>
@@ -143,7 +145,7 @@
       <div class="przerywnik"></div>
       <div class="o-nas-container">
         <div class="o-nas-title-container">
-          <h1 class='o-nas-title'><span class="o-nas-lines">O nas</span></h1>
+          <h1 class='o-nas-title'><span class=" lines">O nas</span></h1>
         </div>
         <div class="kim-jestesmy-container">
           <div class="kim-jestesmy-title">
