@@ -13,6 +13,7 @@ const pChange_btn = document.querySelector(".change");
 //CONTAINER
 const headline = document.querySelector(".headline"); //zmiana tekstu
 const underHeadline = document.querySelector(".under_headnile"); //zmiana tekstu
+const container = document.querySelector(".container");
 //PPRZERYWNIKI
 const przerywnik = document.querySelectorAll(".przerywnik"); //zmienić kolor
 const lines = document.querySelectorAll(".lines");
@@ -71,6 +72,7 @@ let piekarnia = false;
 pChange_btn.addEventListener("click", () => {
   if (!piekarnia) {
     document.title = "Sweet Candies";
+    container.classList.add("cukiernia");
     headline.innerText = "Sweet Candies";
     underHeadline.innerText = "Best cukiernia in your okolica";
     body.classList.add("cukiernia");
