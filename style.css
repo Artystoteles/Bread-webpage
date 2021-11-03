@@ -50,10 +50,11 @@ button {
   background: rgb(233, 227, 200);
   box-shadow: 0px 4px 10px rgb(0, 0, 0);
   width: 100%;
+  z-index: 2;
   transition: all 0.4s ease;
 }
 .navbar-container.cukiernia {
-  background: rgb(231, 82, 187);
+  background: rgb(245, 132, 211);
 }
 .navbar {
   display: flex;
@@ -100,10 +101,11 @@ button {
   border-radius: 3px;
   opacity: 0;
   transform: translateY(-10px);
+  z-index: 2;
   transition: all 0.4s ease;
 }
 .nav-list.cukiernia {
-  background: rgb(231, 82, 187);
+  background: rgb(245, 132, 211);
 }
 .menu button:focus + ul,
 .produkty button:focus + ul,
@@ -137,13 +139,32 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0px 10px 0px;
 }
 
 /* MAIN CONTAINER */
 
 .container {
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/chleb.png");
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 100px black;
+  width: 100%;
+  height: 600px;
+  color: white;
+  z-index: 1;
+}
+.headline {
+  font-family: "Festive", cursive;
+  font-weight: bold;
+  font-size: 6rem;
+  margin-bottom: 10px;
+}
+.under_headnile {
+  font-size: 2rem;
+  font-family: "Roboto", cursive;
 }
 
 /* PRODUCTS CONTAINER */
@@ -308,12 +329,12 @@ button {
   width: 100;
   height: 100px;
   background-color: rgb(233, 227, 200);
-  margin: 10px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
   box-shadow: 0 0 1em rgb(0, 0, 0);
   transition: all 0.4s ease;
 }
 .przerywnik.cukiernia {
-  background: rgb(231, 82, 187);
+  background: rgb(245, 132, 211);
 }
 
 @media (min-midth: 530px) {

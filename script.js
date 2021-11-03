@@ -11,7 +11,8 @@ const thiItem = document.querySelector(".third_item"); //zmiana tekstu
 const fouItem = document.querySelector(".fourth_item"); //zmiana tekstu
 const pChange_btn = document.querySelector(".change");
 //CONTAINER
-
+const headline = document.querySelector(".headline"); //zmiana tekstu
+const underHeadline = document.querySelector(".under_headnile"); //zmiana tekstu
 //PPRZERYWNIKI
 const przerywnik = document.querySelectorAll(".przerywnik"); //zmienić kolor
 const lines = document.querySelectorAll(".lines");
@@ -50,6 +51,7 @@ produktBtn.forEach((button) => {
   const productDiv = button.parentElement;
   button.addEventListener("click", () => {
     if (!btn_active) {
+      console.log(headline.innerText);
       productDiv.classList.add("test");
       button.classList.add("active");
       button.innerText = "Back";
@@ -69,6 +71,8 @@ let piekarnia = false;
 pChange_btn.addEventListener("click", () => {
   if (!piekarnia) {
     document.title = "Sweet Candies";
+    headline.innerText = "Sweet Candies";
+    underHeadline.innerText = "Best cukiernia in your okolica";
     body.classList.add("cukiernia");
     navContainer.classList.add("cukiernia");
 
