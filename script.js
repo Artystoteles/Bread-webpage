@@ -9,10 +9,10 @@ const firItem = document.querySelector(".first_item"); //zmiana tekstu
 const scnItem = document.querySelector(".second_item"); //zmiana tekstu
 const thiItem = document.querySelector(".third_item"); //zmiana tekstu
 const fouItem = document.querySelector(".fourth_item"); //zmiana tekstu
-const pChange_btn = document.querySelector(".change");
+const pChange_btn = document.querySelector(".change-btn");
 //CONTAINER
 const headline = document.querySelector(".headline"); //zmiana tekstu
-const underHeadline = document.querySelector(".under_headnile"); //zmiana tekstu
+const underHeadline = document.querySelector(".under_headline"); //zmiana tekstu
 const container = document.querySelector(".container");
 //PPRZERYWNIKI
 const przerywnik = document.querySelectorAll(".przerywnik"); //zmienić kolor
@@ -42,10 +42,16 @@ const fourthItemImage = document.querySelector(".fourth-item-image"); //zmienić
 const fourthItemName = document.querySelector(".fourth-item-name"); //zmienić nazwe
 const fourthItemDsc = document.querySelector(".fourth-item-description"); //zmienić opis
 
+// FOOTER
+const footer = document.querySelector(".footer");
+const email = document.querySelector(".email");
+
 let btn_active = false;
 
 window.addEventListener("load", () => {
   title.classList.add("loaded");
+  headline.classList.add("loaded");
+  underHeadline.classList.add("loaded");
 });
 
 produktBtn.forEach((button) => {
@@ -74,9 +80,10 @@ pChange_btn.addEventListener("click", () => {
     document.title = "Sweet Candies";
     container.classList.add("cukiernia");
     headline.innerText = "Sweet Candies";
-    underHeadline.innerText = "Best cukiernia in your okolica";
+    underHeadline.innerText = "Najlepsza cukiernia w Twojej okolicy!";
     body.classList.add("cukiernia");
     navContainer.classList.add("cukiernia");
+    footer.classList.add("cukiernia");
 
     navList.forEach((e) => {
       e.classList.add("cukiernia");
@@ -89,6 +96,7 @@ pChange_btn.addEventListener("click", () => {
       e.classList.add("cukiernia");
     });
 
+    email.innerHTML = "<b>Email :</b>  cukiernia@something.com";
     title.innerText = "Sweet Candies";
 
     firItem.innerText = "Donut";
