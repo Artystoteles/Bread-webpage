@@ -72,7 +72,6 @@ produktBtn.forEach((button) => {
   });
 });
 
-//tutaj pizgam magie
 let piekarnia = false;
 
 pChange_btn.addEventListener("click", () => {
