@@ -23,7 +23,7 @@
   </head>
   <body>
     <nav class="navbar-container">
-      <div class="title">Golden Buns
+      <div data-alttitle="Sweet Candies" class="title">Golden Buns
         <button class="change-btn"><span class="material-icons btn-icon">
           cake
           </span></button>
@@ -41,10 +41,10 @@
         <div class="produkty">
           <button class="produkty-btn">Produkty</button>
           <ul class='nav-list'>
-            <li class='first_item'><a href="#">Chleb</a></li>
-            <li class='second_item'><a href="#">Bułka</a></li>
-            <li class='third_item'><a href="#">Bagietki</a></li>
-            <li class='fourth_item'><a href="#">Chleb tostowy</a></li>
+            <li  class='first_item'><a data-alt='Donut' href="#">Chleb</a></li>
+            <li  class='second_item'><a data-alt='Muffin' href="#">Bułka</a></li>
+            <li  class='third_item'><a data-alt='Rogalik' href="#">Bagietki</a></li>
+            <li  class='fourth_item'><a data-alt='Cookie' href="#">Chleb tostowy</a></li>
           </ul>
         </div>
         <div class="o_nas">
@@ -60,8 +60,8 @@
     
     <main class="main-container">
       <div class="container">
-        <h1 class="headline">Golden Buns</h1>
-        <h3 class="under_headline">Najlepsza piekarnia w Twojej okolicy! </p>
+        <h1 data-alt='Sweet Candies' class="headline">Golden Buns</h1>
+        <h3 data-alt='Najlepsza cukiernia w Twojej okolicy!' class="under_headline">Najlepsza piekarnia w Twojej okolicy! </p>
       </div>  
       <div class="przerywnik">
         
@@ -75,6 +75,7 @@
         <div id='chleb' class="produkt-container ">
           <div class="produkt-image-container first-item-image">
             <img
+            data-photo='../images/donut-bgl.png'
               class="product-image"
               src="../images/chleb-bgl.png "
               width="auto"
@@ -82,10 +83,10 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name first-item-name">Bread</h1>
+            <h1 data-alt='Donut' class="product-name first-item-name">Bread</h1>
           </div>
-          <div class="product-description-container">
-            <p class="product-description first-item-description">
+          <div  class="product-description-container">
+            <p data-alt='Just Donut. What did you expected?' class="product-description first-item-description">
               Just bread. What did you expected?
             </p>
           </div>
@@ -94,6 +95,7 @@
         <div id='bulka' class="produkt-container">
           <div class="produkt-image-container second-item-image">
             <img
+            data-photo='../images/muffin-bgl.png'
               class="product-image"
               src="../images/bulka-bgl.png "
               width="auto"
@@ -101,16 +103,17 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name second-item-name">Bun</h1>
+            <h1 data-alt='Muffin' class="product-name second-item-name">Bun</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description second-item-description">Just bun. What did you expected?</p>
+            <p data-alt='Just Muffin. What did you expected?' class="product-description second-item-description">Just bun. What did you expected?</p>
           </div>
           <button class="produkt-btn">Details</button>
         </div>
         <div id='bagietka' class="produkt-container">
           <div class="produkt-image-container third-item-image">
             <img
+            data-photo='../images/rogalik-bgl.png'
               class="product-image"
               src="../images/bagietka-bgl.png "
               width="auto"
@@ -118,10 +121,10 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name third-item-name">Baguette</h1>
+            <h1 data-alt='Rogalik' class="product-name third-item-name">Baguette</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description third-item-description">
+            <p data-alt='Just Rogalik. What did you expected?' class="product-description third-item-description">
               Just baguette. What did you expected?
             </p>
           </div>
@@ -131,6 +134,7 @@
          
           <div class="produkt-image-container fourth-item-image">
             <img
+            data-photo='../images/cookie-bgl.png'
               class="product-image"
               src="../images/tast-bread-bgl.png "
               width="auto"
@@ -138,10 +142,10 @@
             />
           </div>
           <div class="product-name-container">
-            <h1 class="product-name fourth-item-name">Toast bread</h1>
+            <h1 data-alt='Cookie' class="product-name fourth-item-name">Toast bread</h1>
           </div>
           <div class="product-description-container">
-            <p class="product-description fourth-item-description">
+            <p data-alt='Just Cookie. What did you expected?' class="product-description fourth-item-description">
               Just Toast bread. What did you expected?
             </p>
           </div>
@@ -172,7 +176,7 @@
     <footer class='footer'>
       <h2 class="kontakt">Kontakt</h2>
       <div class="left">
-        <p class="email"><b>Email :</b>  piekarnia@something.com</p>
+        <p data-alt='<b>Email :</b> cukiernia@something.com' class="email"><b>Email :</b>  piekarnia@something.com</p>
         <p class="adres"><b>Adres :</b>  Kraków rynek główny</p>
       </div>
       <div class="right">

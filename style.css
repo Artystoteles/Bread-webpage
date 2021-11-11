@@ -409,14 +409,14 @@ button {
   );
 }
 
-@media (min-midth: 530px) {
-  .title {
-    font-size: 6rem;
+@media only screen and (max-midth: 530px) {
+  .products-list {
+    flex-direction: column;
   }
 }
-@media (min-midth: 768px) {
+@media (max-midth: 768px) {
 }
-@media (min-midth: 1024px) {
+@media (max-midth: 1024px) {
 }
 @media (max-midth: 1400px) {
   .products-list {
