@@ -272,6 +272,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 /* O NAS CONTAINER */
@@ -283,7 +284,6 @@ button {
   margin-bottom: 50px;
   height: 600px;
 }
-
 .kim-jestesmy-container h2 {
   text-align: center;
   font-family: "Roboto", cursive;
@@ -409,19 +409,11 @@ button {
   );
 }
 
-@media only screen and (max-midth: 530px) {
-  .products-list {
-    flex-direction: column;
-  }
-}
-@media (max-midth: 768px) {
-}
-@media (max-midth: 1024px) {
-}
-@media (max-midth: 1400px) {
+/* @media (max-width: 1400px) {
   .products-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
-}
+} */

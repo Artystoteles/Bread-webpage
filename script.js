@@ -1,22 +1,56 @@
-const body = document.body; //zmiana koloru
-const element = document.body.querySelectorAll("*");
-console.log(element);
-
-//NAVBAR
-const navLists = [element[7], element[16], element[27]];
-const przerywniki = [element[39], element[77]];
-const linie = [element[43], element[81]];
-const produkt_btns = [element[52], element[60], element[68], element[76]];
+const elementy = {
+  body: document.body,
+  //NAVBAR
+  navContainer: document.querySelector(".navbar-container"), //zmiana koloru
+  title: document.querySelector(".title"), //zmiana tekstu
+  //items
+  navList: document.querySelectorAll(".nav-list"),
+  firItem: document.querySelector(".a_first_item"), //zmiana tekstu
+  scnItem: document.querySelector(".a_second_item"), //zmiana tekstu
+  thiItem: document.querySelector(".a_third_item"), //zmiana tekstu
+  fouItem: document.querySelector(".a_fourth_item"), //zmiana tekstu
+  pChange_btn: document.querySelector(".change-btn"),
+  //CONTAINER
+  headline: document.querySelector(".headline"), //zmiana tekstu
+  underHeadline: document.querySelector(".under_headline"), //zmiana tekstu
+  container: document.querySelector(".container"),
+  //PPRZERYWNIKI
+  przerywnik: document.querySelectorAll(".przerywnik"), //zmienić kolor
+  lines: document.querySelectorAll(".lines"),
+  //PRODUKTY
+  produktBtn: document.querySelectorAll(".produkt-btn"), //zostawić
+  produktContainer: document.querySelectorAll(".produkt-container"), //można kolor zmienić
+  //first item
+  firstItemImage: document.querySelector(".fii"), //zmienić zdjęcie
+  firstItemName: document.querySelector(".first-item-name"), //zmienić nazwe
+  firstItemDsc: document.querySelector(".first-item-description"), //zmienić opis
+  //second item
+  secondItemImage: document.querySelector(".sii"), //zmienić zdjęcie
+  secondItemName: document.querySelector(".second-item-name"), //zmienić nazwe
+  secondItemDsc: document.querySelector(".second-item-description"), //zmienić opis
+  //third item
+  thirdItemImage: document.querySelector(".tii"), //zmienić zdjęcie
+  thirdItemName: document.querySelector(".third-item-name"), //zmienić nazwe
+  thirdItemDsc: document.querySelector(".third-item-description"), //zmienić opis
+  //fourth item
+  fourthItemImage: document.querySelector(".foii"), //zmienić zdjęcie
+  fourthItemName: document.querySelector(".fourth-item-name"), //zmienić nazwe
+  fourthItemDsc: document.querySelector(".fourth-item-description"), //zmienić opis
+  // FOOTER
+  footer: document.querySelector(".footer"),
+  email: document.querySelector(".email"),
+};
+console.log(elementy.firstItemImage);
 
 let btn_active = false;
 
 window.addEventListener("load", () => {
-  element[1].classList.add("loaded");
-  element[36].classList.add("loaded");
-  element[37].classList.add("loaded");
+  elementy.title.classList.add("loaded");
+  elementy.headline.classList.add("loaded");
+  elementy.underHeadline.classList.add("loaded");
 });
 
-produkt_btns.forEach((button) => {
+elementy.produktBtn.forEach((button) => {
   const productDiv = button.parentElement;
   button.addEventListener("click", () => {
     if (!btn_active) {
@@ -34,65 +68,57 @@ produkt_btns.forEach((button) => {
 });
 
 let piekarnia = false;
-
-element[2].addEventListener("click", () => {
+elementy.pChange_btn.addEventListener("click", () => {
   if (!piekarnia) {
     document.title = "Sweet Candies";
-    element[35].classList.add("cukiernia");
-    element[36].innerText = element[36].dataset.alt;
-    element[37].innerText = element[37].dataset.alt;
-    body.classList.add("cukiernia");
-    element[0].classList.add("cukiernia");
-    element[89].classList.add("cukiernia");
+    elementy.container.classList.add("cukiernia");
+    elementy.headline.innerText = "Sweet Candies";
+    elementy.underHeadline.innerText = "Najlepsza cukiernia w Twojej okolicy!";
+    elementy.body.classList.add("cukiernia");
+    elementy.navContainer.classList.add("cukiernia");
+    elementy.footer.classList.add("cukiernia");
 
-    navLists.forEach((e) => {
+    elementy.navList.forEach((e) => {
       e.classList.add("cukiernia");
     });
-    przerywniki.forEach((e) => {
-      e.classList.add("cukiernia");
-    });
-
-    linie.forEach((e) => {
+    elementy.przerywnik.forEach((e) => {
       e.classList.add("cukiernia");
     });
 
-    element[92].innerHTML = element[92].dataset.alt;
-    element[1].innerText = "Sweet Candies";
+    elementy.lines.forEach((e) => {
+      e.classList.add("cukiernia");
+    });
 
-    console.log(element[18].dataset.alt);
-    console.log(element[18].innerText);
+    elementy.email.innerHTML = elementy.email.dataset.alt;
+    elementy.title.innerText = elementy.title.dataset.alttitle;
 
-    element[18].innerHTML = element[18].dataset.alt;
-    element[20].innerHTML = element[20].dataset.alt;
-    element[22].innerHTML = element[22].dataset.alt;
-    element[24].innerHTML = element[24].dataset.alt;
+    elementy.firItem.innerText = elementy.firItem.dataset.alt;
+    elementy.scnItem.innerText = elementy.scnItem.dataset.alt;
+    elementy.thiItem.innerText = elementy.thiItem.dataset.alt;
+    elementy.fouItem.innerText = elementy.fouItem.dataset.alt;
 
     //first item
-    element[47].src = element[47].dataset.photo;
-    element[49].innerText = element[49].dataset.alt;
-    element[51].innerText = element[51].dataset.alt;
+    elementy.firstItemImage.src = elementy.firstItemImage.dataset.photo;
+    elementy.firstItemName.innerText = elementy.firstItemName.dataset.alt;
+    elementy.firstItemDsc.innerText = elementy.firstItemDsc.dataset.alt;
     //second item
-    element[55].src = element[55].dataset.photo;
-    element[57].innerText = element[57].dataset.alt;
-    element[59].innerText = element[59].dataset.alt;
+    elementy.secondItemImage.src = elementy.secondItemImage.dataset.photo;
+    elementy.secondItemName.innerText = elementy.secondItemName.dataset.alt;
+    elementy.secondItemDsc.innerText = elementy.secondItemDsc.dataset.alt;
     //third item
-    element[63].src = element[63].dataset.photo;
-    element[65].innerText = element[65].dataset.alt;
-    element[67].innerText = element[67].dataset.alt;
+    elementy.thirdItemImage.src = elementy.thirdItemImage.dataset.photo;
+    elementy.thirdItemName.innerText = elementy.thirdItemName.dataset.alt;
+    elementy.thirdItemDsc.innerText = elementy.thirdItemDsc.dataset.alt;
     //fourth item
-    element[71].src = element[71].dataset.photo;
-    element[73].innerText = element[73].dataset.alt;
-    element[75].innerText = element[75].dataset.alt;
+    elementy.fourthItemImage.src = elementy.fourthItemImage.dataset.photo;
+    elementy.fourthItemName.innerText = elementy.fourthItemName.dataset.alt;
+    elementy.fourthItemDsc.innerText = elementy.fourthItemDsc.dataset.alt;
     piekarnia = true;
   } else {
-    body.classList.remove("cukiernia");
-    element[0].classList.remove("cukiernia");
-    przerywniki.forEach((e) => {
-      e.classList.remove("cukiernia");
-    });
-    linie.forEach((e) => {
-      e.classList.remove("cukiernia");
-    });
+    elementy.body.classList.remove("cukiernia");
+    elementy.navContainer.classList.remove("cukiernia");
+    elementy.przerywnik.classList.remove("cukiernia");
+    elementy.lines.classList.remove("cukiernia");
     piekarnia = false;
   }
 });
